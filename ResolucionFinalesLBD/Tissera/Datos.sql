@@ -1,0 +1,62 @@
+INSERT INTO `Clases` (`IDClase`, `Nombre`) VALUES (1, 'Tartas');
+INSERT INTO `Clases` (`IDClase`, `Nombre`) VALUES (2, 'Cremas Frías');
+INSERT INTO `Clases` (`IDClase`, `Nombre`) VALUES (3, 'Masas bases');
+INSERT INTO `Clases` (`IDClase`, `Nombre`) VALUES (4, 'Postres');
+INSERT INTO `Clases` (`IDClase`, `Nombre`) VALUES (5, 'Coberturas');
+INSERT INTO `Clases` (`IDClase`, `Nombre`) VALUES (6, 'Rellenos');
+INSERT INTO `Clases` (`IDClase`, `Nombre`) VALUES (7,'Decoraciones');
+
+INSERT INTO `Magnitudes` (`IDMagnitud`, `Nombre`) VALUES (1, 'g');
+INSERT INTO `Magnitudes` (`IDMagnitud`, `Nombre`) VALUES (2, 'cc');
+INSERT INTO `Magnitudes` (`IDMagnitud`, `Nombre`) VALUES (3, 'u');
+INSERT INTO `Magnitudes` (`IDMagnitud`, `Nombre`) VALUES (4, 'porciones');
+
+INSERT INTO `Ingrediente` (`IDIngrediente`, `Nombre`, `Precio`, `Magnitud`) VALUES (1, 'Manteca', 5.06, 1);
+INSERT INTO `Ingrediente` (`IDIngrediente`, `Nombre`, `Precio`, `Magnitud`) VALUES (2, 'Azúcar', 4.0065, 1);
+INSERT INTO `Ingrediente` (`IDIngrediente`, `Nombre`, `Precio`, `Magnitud`) VALUES (3, 'Huevos', 13.34, 3);
+INSERT INTO `Ingrediente` (`IDIngrediente`, `Nombre`, `Precio`, `Magnitud`) VALUES (4, 'Leche', 11.0, 2);
+INSERT INTO `Ingrediente` (`IDIngrediente`, `Nombre`, `Precio`, `Magnitud`) VALUES (5, 'Chocolate para taza', 10.1, 1);
+INSERT INTO `Ingrediente` (`IDIngrediente`, `Nombre`, `Precio`, `Magnitud`) VALUES (6, 'Harina', 10.0055, 1);
+INSERT INTO `Ingrediente` (`IDIngrediente`, `Nombre`, `Precio`, `Magnitud`) VALUES (7, 'Polvo para hornear', 20.06, 1);
+INSERT INTO `Ingrediente` (`IDIngrediente`, `Nombre`, `Precio`, `Magnitud`) VALUES (8, 'Bicarbonato de sodio', 10.06, 1);
+INSERT INTO `Ingrediente` (`IDIngrediente`, `Nombre`, `Precio`, `Magnitud`) VALUES (9, 'Coñac', 82.0, 2);
+INSERT INTO `Ingrediente` (`IDIngrediente`, `Nombre`, `Precio`, `Magnitud`) VALUES (10, 'Escencia de vainilla', 15.0, 2);
+INSERT INTO `Ingrediente` (`IDIngrediente`, `Nombre`, `Precio`, `Magnitud`) VALUES (11, 'Yemas', 28.0, 1);
+INSERT INTO `Ingrediente` (`IDIngrediente`, `Nombre`, `Precio`, `Magnitud`) VALUES (12, 'Almidón de maíz', 15.0, 1);
+INSERT INTO `Ingrediente` (`IDIngrediente`, `Nombre`, `Precio`, `Magnitud`) VALUES (13, 'Jugo de limón', 10.04, 2);
+INSERT INTO `Ingrediente` (`IDIngrediente`, `Nombre`, `Precio`, `Magnitud`) VALUES (14, 'Claras', 28.0, 1);
+INSERT INTO `Ingrediente` (`IDIngrediente`, `Nombre`, `Precio`, `Magnitud`) VALUES (15, 'Chocolate cobertura', 125, 1);
+INSERT INTO `Ingrediente` (`IDIngrediente`, `Nombre`, `Precio`, `Magnitud`) VALUES (16, 'Nueces', 10.2, 1);
+INSERT INTO `Ingrediente` (`IDIngrediente`, `Nombre`, `Precio`, `Magnitud`) VALUES (17, 'Dulce de leche', 18, 1);
+INSERT INTO `Ingrediente` (`IDIngrediente`, `Nombre`, `Precio`, `Magnitud`) VALUES (18, 'Agua', 10.5, 2);
+
+INSERT INTO `Recetas` (`IDReceta`, `Nombre`, `Rendimiento`, `Magnitud`, `Clase`, `Procedimiento`) VALUES(1, 'Merengue', 500.0, 1, 5, 'Batir ...');
+INSERT INTO `Recetas` (`IDReceta`, `Nombre`, `Rendimiento`, `Magnitud`, `Clase`, `Procedimiento`) VALUES(2, 'Masa frola', 10.0, 4, 3, 'Mezclar ...');
+INSERT INTO `Recetas` (`IDReceta`, `Nombre`, `Rendimiento`, `Magnitud`, `Clase`, `Procedimiento`) VALUES(3, 'Lemon Pie', 3.0, 4, 1, 'Armar ...');
+INSERT INTO `Recetas` (`IDReceta`, `Nombre`, `Rendimiento`, `Magnitud`, `Clase`, `Procedimiento`) VALUES(4, 'Bizcochuelo', 6.0, 4, 3, 'Mezclar ...');
+
+INSERT INTO `Composicion` (`IDReceta`, `IDIngrediente`, `Medida`) VALUES ('4', '3', 2);
+INSERT INTO `Composicion` (`IDReceta`, `IDIngrediente`, `Medida`) VALUES ('4', '2', 60);
+INSERT INTO `Composicion` (`IDReceta`, `IDIngrediente`, `Medida`) VALUES ('4', '6', 60);
+INSERT INTO `Composicion` (`IDReceta`, `IDIngrediente`, `Medida`) VALUES ('4', '10', 10);
+INSERT INTO `Composicion` (`IDReceta`, `IDIngrediente`, `Medida`) VALUES ('1', '2', 340);
+INSERT INTO `Composicion` (`IDReceta`, `IDIngrediente`, `Medida`) VALUES ('1', '14', 150);
+INSERT INTO `Composicion` (`IDReceta`, `IDIngrediente`, `Medida`) VALUES ('2', '1', 150);
+INSERT INTO `Composicion` (`IDReceta`, `IDIngrediente`, `Medida`) VALUES ('2', '2', 150);
+INSERT INTO `Composicion` (`IDReceta`, `IDIngrediente`, `Medida`) VALUES ('2', '11', 80);
+INSERT INTO `Composicion` (`IDReceta`, `IDIngrediente`, `Medida`) VALUES ('2', '6', 300);
+INSERT INTO `Composicion` (`IDReceta`, `IDIngrediente`, `Medida`) VALUES ('2', '7', 5);
+INSERT INTO `Composicion` (`IDReceta`, `IDIngrediente`, `Medida`) VALUES ('2', '10', 10);
+INSERT INTO `Composicion` (`IDReceta`, `IDIngrediente`, `Medida`) VALUES ('3', '11', 80);
+INSERT INTO `Composicion` (`IDReceta`, `IDIngrediente`, `Medida`) VALUES ('3', '2', 100);
+INSERT INTO `Composicion` (`IDReceta`, `IDIngrediente`, `Medida`) VALUES ('3', '12', 40);
+INSERT INTO `Composicion` (`IDReceta`, `IDIngrediente`, `Medida`) VALUES ('3', '14', 200);
+INSERT INTO `Composicion` (`IDReceta`, `IDIngrediente`, `Medida`) VALUES ('3', '13', 60);
+INSERT INTO `Composicion` (`IDReceta`, `IDIngrediente`, `Medida`) VALUES ('3', '10', 10);
+INSERT INTO `Composicion` (`IDReceta`, `IDIngrediente`, `Medida`) VALUES ('4', '14', 250);
+
+INSERT INTO `RecetaEnRecetas` (`IDReceta`, `IDComponente`, `Medida`) VALUES ('3', '1', '650');
+INSERT INTO `RecetaEnRecetas` (`IDReceta`, `IDComponente`, `Medida`) VALUES ('3', '2', '10');
+INSERT INTO `RecetaEnRecetas` (`IDReceta`, `IDComponente`, `Medida`) VALUES ('3', '3', '12');
+INSERT INTO `RecetaEnRecetas` (`IDReceta`, `IDComponente`, `Medida`) VALUES ('4', '3', '6');
+INSERT INTO `RecetaEnRecetas` (`IDReceta`, `IDComponente`, `Medida`) VALUES ('4', '1', '750');
